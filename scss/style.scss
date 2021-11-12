@@ -39,6 +39,9 @@ $f-family-Roboto: 'Roboto', sans-serif;
   &:hover {
     text-decoration: underline;
   }
+  @media (max-width: 500px) {
+    margin-bottom: 10px;
+  }
 }
 .button-slide-green {
   width: 220px;
@@ -278,18 +281,31 @@ $f-family-Roboto: 'Roboto', sans-serif;
           font-weight: 600;
           margin-bottom: 61px;
           text-align: center;
+          @media (max-width: 500px) {
+            @include style-text(50px, 50px, $color-white);
+            text-align: center;
+          }
         }
         .slide__text {
-          @include style-text(30px, 22px, $color-white);
+          @include style-text(30px, 30px, $color-white);
           margin-bottom: 127px;
           text-align: center;
+          @media (max-width: 500px) {
+            @include style-text(25px, 30px, $color-white);
+            text-align: center;
+          }
         }
         .slide__button-block {
-          min-width: 479px;
+          max-width: 479px;
+          width: 100%;
           display: flex;
           justify-content: space-between;
           margin-bottom: 129px;
           flex-wrap: wrap;
+          @media (max-width: 500px) {
+            @include flex-column-center;
+          }
+
 
         }
       }
@@ -307,6 +323,9 @@ $f-family-Roboto: 'Roboto', sans-serif;
         }
         .about__text {
           @include font_title_content (102px);
+          @media (max-width: 748px) {
+            margin-bottom: 70px;
+          }
 
         }
         .about__block {
@@ -330,11 +349,22 @@ $f-family-Roboto: 'Roboto', sans-serif;
               .about__block_text {
                 @include style-text(15px, 22px, $color-black);
                 text-align: center;
+                @media (max-width: 748px) {
+                  margin-bottom: 20px;
+                }
               }
               @media (min-width: 1200px) {
                 margin: 0 5px;
               }
+              @media (max-width: 748px) {
+                max-width: 750px;
+                width: 100%;
+              }
             }
+          @media (max-width: 748px) {
+            @include flex-column-center;
+            width: 100%;
+          }
         }
       }
     }
@@ -869,7 +899,14 @@ $f-family-Roboto: 'Roboto', sans-serif;
               color: #FFFFFF;
               text-align: center;
             }
+            &:nth-child(2) {
+              flex: 1 0 auto;
+            }
           }
+          @media (max-width: 1023px) {
+            justify-content: center;
+          }
+
 
         }
         .contact__form-block {
@@ -879,13 +916,17 @@ $f-family-Roboto: 'Roboto', sans-serif;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-width: 1205px;
             width: 100%;
             margin-bottom: 50px;
             .input_item {
+              @include flex-column-center;
+              max-width: 580px;
+              width: 100%;
               margin: 5px;
               .input_item_item {
                 display: flex;
-                width: 570px;
+                width: 98%;
                 height: 100px;
                 background: $color_white;
                 border-radius: 20px;
@@ -911,9 +952,9 @@ $f-family-Roboto: 'Roboto', sans-serif;
                 }
               }
             }
-
             .input_message {
-              width: 570px;
+              max-width: 570px;
+              width: 100%;
               height: 380px;
               background: $color_white;
               border-radius: 20px;
@@ -924,7 +965,7 @@ $f-family-Roboto: 'Roboto', sans-serif;
               letter-spacing: 0.1em;
               text-transform: uppercase;
               padding: 36px 30px;
-              margin: 0 5px 0 5px;
+              margin: 5px;
               &::-webkit-input-placeholder { /* Chrome */
                 color: $color-black;
               }
