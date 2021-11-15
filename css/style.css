@@ -80,6 +80,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .button-slide-lite:hover {
   text-decoration: underline;
+  background: #00897B;
+  border: 4px solid #00897B;
+  font: bold 22px/26px "Roboto", sans-serif;
+  color: #FFFFFF;
 }
 @media (max-width: 500px) {
   .button-slide-lite {
@@ -144,61 +148,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 5px 10px;
 }
 
-/*
-@mixin content__block-title-text {
-  font-family: $f-family-Open;
-  font-size: 38px;
-  line-height: 50/38*100%;
-  color: $color-black;
-  font-weight: bold;
-}
-@mixin content__block-content-text {
-  font-family: $f-family-Open;
-  font-size: 18px;
-  line-height: 32/18*100%;
-  color: $color-black;
-}
-
-@mixin pricing-title-text {
-  font-family: $f-family;
-  font-size: 38px;
-  line-height: 50/38*100%;
-  color: $color-black;
-  font-weight: bold;
-}
-@mixin pricing-content-text {
-  font-family: $f-family;
-  font-size: 18px;
-  line-height: 32/18*100%;
-  color: $color-black;
-}
-
-@mixin footer_menu_text {
-  font-family: $f-family;
-  font-size: 16px;
-  line-height: 34 / 16 * 100%;
-  color: $color_text_menu_footer;
-}
-@mixin footer_bottom_text {
-  font-family: $f-family;
-  font-size: 12px;
-  line-height: 18 / 12 * 100%;
-  color: $color_text_bottom_footer;
-}
-
-@mixin feedback__form {
-  font-family: $f-family;
-  font-size: 14px;
-  line-height: 50 / 14 * 100%;
-  color: $color_black;
-}
-
-@mixin media-max-width ($max-width) {
-  @media screen {
-    max-width: $max-width;
-  }
-}
-*/
 .button-dark {
   background-color: #50e3c2;
 }
@@ -245,6 +194,11 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 21px;
   color: #000000;
 }
+@media (max-width: 830px) {
+  .wrapper .header .header__body .header__menu .show {
+    display: block;
+  }
+}
 .wrapper .header .header__body .header__menu .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -280,9 +234,47 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1015px) {
+  .wrapper .header .header__body .header__menu .menu__list .menu__item a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 110%;
+    color: #000000;
+    font-weight: 600;
+  }
+}
+@media (max-width: 1015px) {
   .wrapper .header .header__body .header__menu .menu__list .menu__item {
+    margin-left: 30px;
+  }
+}
+@media (max-width: 1200px) {
+  .wrapper .header .header__body .header__menu .menu__list {
     margin-left: 40px;
+  }
+}
+@media (max-width: 830px) {
+  .wrapper .header .header__body .header__menu .menu__list {
+    display: none;
+  }
+}
+@media (max-width: 829px) {
+  .wrapper .header .header__body .header__menu .trigger {
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .wrapper .header .header__body .header__menu .trigger i {
+    display: block;
+    border: 1px;
+    width: 21px;
+    height: 3px;
+    background-color: black;
+    margin-bottom: 1px;
   }
 }
 .wrapper .slide {
@@ -317,7 +309,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFFFFF;
   padding-top: 217px;
   font-weight: 600;
-  margin-bottom: 61px;
+  margin: 0 10px 61px 10px;
   text-align: center;
 }
 @media (max-width: 500px) {
@@ -334,7 +326,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 30px;
   line-height: 30px;
   color: #FFFFFF;
-  margin-bottom: 127px;
+  margin: 0 10px 127px 10px;
   text-align: center;
 }
 @media (max-width: 500px) {
@@ -572,18 +564,18 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper .service .service__container .service__block .type__service .type__service_button:hover {
   text-decoration: underline;
 }
-.wrapper .service .service__container .service__block .type__service:first-child {
+.wrapper .service .service__container .service__block .type__service:hover {
   background: #00897B;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
 }
-.wrapper .service .service__container .service__block .type__service:first-child .type__service_title {
+.wrapper .service .service__container .service__block .type__service:hover .type__service_title {
   color: #FFFFFF;
 }
-.wrapper .service .service__container .service__block .type__service:first-child .type__service_text {
+.wrapper .service .service__container .service__block .type__service:hover .type__service_text {
   color: #FFFFFF;
 }
-.wrapper .service .service__container .service__block .type__service:first-child .type__service_button {
+.wrapper .service .service__container .service__block .type__service:hover .type__service_button {
   background: #00897B;
   border-color: #FFFFFF;
   color: #FFFFFF;
@@ -673,9 +665,11 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 388px;
   height: 669px;
   background: #FFFFFF;
+  margin: 10px;
+}
+.wrapper .pricing .pricing__container .pricing__list .price__block .price:hover {
   -webkit-box-shadow: 0 3px 25px rgba(0, 0, 0, 0.35);
           box-shadow: 0 3px 25px rgba(0, 0, 0, 0.35);
-  margin: 10px;
 }
 .wrapper .pricing .pricing__container .pricing__list .price__block .price .price_blu-block {
   width: 100%;
@@ -782,8 +776,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .wrapper .pricing .pricing__container .pricing__list .price__block .price .price__button:hover {
   text-decoration: underline;
-}
-.wrapper .pricing .pricing__container .pricing__list .price__block .price .price__button-green {
   width: 189px;
   height: 60px;
   display: -webkit-box;
@@ -796,18 +788,8 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-align: center;
           align-items: center;
   background-color: #00897B;
-  border: 2px solid #00897B;
   color: #FFFFFF;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 100%;
-  text-align: center;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-.wrapper .pricing .pricing__container .pricing__list .price__block .price .price__button-green:hover {
-  text-decoration: underline;
+  border: 2px solid #00897B;
 }
 .wrapper .pricing .pricing__container .pricing__list .price__block .price:nth-child(2) {
   -webkit-box-flex: 1;
@@ -1426,7 +1408,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .wrapper .contact .contact__container .contact__form-block .contact__form-block_button {
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
   height: 100px;
   background: #3949AB;
   border-radius: 20px;
