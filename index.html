@@ -11,6 +11,7 @@
 </head>
 <body>
   <div class="wrapper">
+
     <header class="header">
       <div class="header__body">
         <div class="header__logo">
@@ -68,6 +69,10 @@
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <br>
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         </p>
+        <span id=arrowAbout class="arrow_black_down">
+          <i></i>
+          <i></i>
+        </span>
         <div class="about__block">
           <div class="about__block_one about_little_block" >
             <img class="about__block_img" src="img/about_us/internet.png" alt="internet">
@@ -91,10 +96,6 @@
               sed do eiusmod tempor</p>
           </div>
         </div>
-        <span id=arrowAbout class="arrow_black_down">
-          <i></i>
-          <i></i>
-        </span>
       </div>
     </div>
 
@@ -103,9 +104,13 @@
         <h2 id="service_title" class="service__title">Our Services</h2>
         <p class="service__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<br>
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+        <span id=arrowService class="arrow_black_down arrowService">
+          <i></i>
+          <i></i>
+        </span>
         <div class="service__block">
           <div class="type__service">
-            <img class="type__service_img" src="img/services/smartphone-white.png" alt="smartphone">
+            <img class="type__service_img" src="img/services/smartphone-black.png" alt="smartphone">
             <h3 class="type__service_title">Research</h3>
             <p class="type__service_text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum iti atque corrupti quos.
             </p>
@@ -158,17 +163,26 @@
         <h2 id="pricing_title" class="pricing__title">Pricing Plan</h2>
         <p class="pricing__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<br>
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+        <span id=arrowPricing class="arrow_black_down arrowPricing ">
+          <i></i>
+          <i></i>
+        </span>
         <div class="pricing__list">
           <div class="price__block">
-            <div class="price__free-Trail price">
+            <div class="price__free-trail price">
               <div class="price_blu-block">
                 <p class="rate">Free Trail</p>
+                <div class="blu-block_line"></div>
                 <ul class="rate-month">
                   <li class="currency">$</li>
                   <li class="money">00</li>
                   <li class="period">per month</li>
                 </ul>
               </div>
+              <span id=arrowPricingFree class="arrow_black_down_white arrowPricingFree">
+          <i></i>
+          <i></i>
+        </span>
               <ul class="price__Free-Trail list">
                 <li>30 Free Trail</li>
                 <li>5 Free Projects</li>
@@ -182,12 +196,17 @@
             <div class="price__basic price">
               <div class="price_blu-block">
                 <p class="rate">Basic</p>
+                <div class="blu-block_line"></div>
                 <ul class="rate-month">
                   <li class="currency">$</li>
                   <li class="money">50</li>
                   <li class="period">per month</li>
                 </ul>
               </div>
+              <span id=arrowPricingBasic class="arrow_black_down_white arrowPricingBasic">
+          <i></i>
+          <i></i>
+        </span>
               <ul class="price__basic-list list">
                 <li>30 Free Trail</li>
                 <li>5 Free Projects</li>
@@ -201,12 +220,17 @@
             <div class="price__ultimates price">
               <div class="price_blu-block">
                 <p class="rate">Ultimates</p>
+                <div class="blu-block_line"></div>
                 <ul class="rate-month">
                   <li class="currency">$</li>
                   <li class="money">99</li>
                   <li class="period">per month</li>
                 </ul>
               </div>
+              <span id=arrowPricingUltimates class="arrow_black_down_white arrowPricingUltimates">
+          <i></i>
+          <i></i>
+        </span>
               <ul class="price__ultimates list">
                 <li>30 Free Trail</li>
                 <li>5 Free Projects</li>
@@ -224,12 +248,16 @@
 
     <div class="team">
       <div class="team__container">
-        <h2 id="team_title" class="team__title">Blog</h2>
+        <h2 id="team_title" class="team__title">Our Team Member</h2>
         <p class="team__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<br>
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+        <span id=arrowTeam class="arrow_black_down arrowTeam">
+          <i></i>
+          <i></i>
+        </span>
         <div class="team__profile-block">
           <div class="profile">
-            <img class="profile_img" src="img/Team/man-1.png" alt="man">
+            <img id="man-1" class="profile_img" src="img/Team/man-1.png" alt="man">
             <h2 class="profile_name">John Doe</h2>
             <p class="profile_post">General Manager</p>
             <ul class="profile_social">
@@ -240,7 +268,7 @@
             </ul>
           </div>
           <div class="profile">
-            <img class="profile_img" src="img/Team/man-2.png" alt="man">
+            <img id=man-2 class="profile_img" src="img/Team/man-2.png" alt="man">
             <h2 class="profile_name">Alexa Biru</h2>
             <p class="profile_post">Office Director</p>
             <ul class="profile_social">
@@ -251,7 +279,7 @@
             </ul>
           </div>
           <div class="profile">
-            <img class="profile_img" src="img/Team/man-3.png" alt="man">
+            <img id=man-3 class="profile_img" src="img/Team/man-3.png" alt="man">
             <h2 class="profile_name">Ronobir Sing</h2>
             <p class="profile_post">Admin</p>
             <ul class="profile_social">
@@ -263,18 +291,22 @@
           </div>
         </div>
         <div class="team__next-prev-button">
-          <button class="next-prev-button"></button>
-          <button class="next-prev-button"></button>
-          <button class="next-prev-button"></button>
+          <button id='teamButtonProfileOne' class="next-prev-button" type="button"></button>
+          <button id='teamButtonProfileTwo' class="next-prev-button" type="button" ></button>
+          <button id='teamButtonProfileThree' class="next-prev-button" type="button"></button>
         </div>
       </div>
     </div>
 
     <div class="blog">
       <div class="blog__container">
-        <h2 id="blog_title" class="blog__title">Our Team Member</h2>
+        <h2 id="blog_title" class="blog__title">Blog</h2>
         <p class="blog__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<br>
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+        <span id=arrowBlog class="arrow_black_down arrowBlog">
+          <i></i>
+          <i></i>
+        </span>
         <div class="blog__block">
           <img class="blog__block_img" src="img/Blog/image-1.png" alt="seo">
           <div class="block__content">
@@ -325,6 +357,10 @@
         <h2 id="contact_title"class="contact__title">Contact Us</h2>
         <p class="contact__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<br>
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+        <span id=arrowContact class="arrow_black_down_white arrowContact">
+          <i></i>
+          <i></i>
+        </span>
         <div class="contact__group">
           <div class="contact__group_adress contact__group_mini-container">
             <div class="contact__group_img"> <img src="img/Contact%20group/adress.png" alt="adress"></div>
