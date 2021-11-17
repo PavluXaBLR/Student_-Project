@@ -83,3 +83,34 @@ function openContact() {
     document.querySelector('.arrowContact').classList.toggle('open');
 }
 
+
+document.getElementById('teamButtonProfileOne').onclick = function () {
+    teamProfile1()
+};
+function teamProfile1() {
+    document.querySelector('#man-1').classList.toggle('index1');
+}
+
+/*let teamButtonProfileOne = document.getElementById('teamButtonProfileOne');
+let man = document.getElementById ('man-1') ;
+let man1 = document.querySelector('#man-1');
+
+teamButtonProfileOne.onclick = function() {
+    man1.classList.add('index1');
+};*/
+
+
+
+document.getElementById('teamButtonProfileTwo').onclick = function () {
+    teamProfile2()
+};
+function teamProfile2() {
+    document.querySelector('#man-2').classList.toggle('index2');
+}
+
+document.getElementById('teamButtonProfileThree').onclick = function () {
+    teamProfile3()
+};
+function teamProfile3() {
+    document.querySelector('#man-3').classList.toggle('index3');
+}
