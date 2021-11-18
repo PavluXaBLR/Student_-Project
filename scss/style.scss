@@ -23,6 +23,9 @@ $max-width-768: 769px;
   text-align: center;
   padding-top: 115px;
   margin-bottom: 30px;
+  @media (max-width: 1023px) {
+    padding-top: 50px;
+  }
 }
 
 @mixin font_title_content($margin-bottom) {
@@ -31,6 +34,9 @@ $max-width-768: 769px;
   line-height: 24 / 18 * 100%;
   text-align: center;
   margin-bottom: $margin-bottom;
+  @media (max-width: 1023px) {
+    margin-bottom: 50px;
+  }
 }
 
 @mixin font_title_mobile {
@@ -1132,7 +1138,7 @@ $max-width-768: 769px;
       .team__profile-block {
         display: flex;
         //justify-content: space-between;
-        width: 100%;
+        width: 89%;
 
         .profile {
           @include flex-column-center;

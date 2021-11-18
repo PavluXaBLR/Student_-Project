@@ -754,6 +754,11 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 115px;
   margin-bottom: 30px;
 }
+@media (max-width: 1023px) {
+  .wrapper .about .about__container .about__title {
+    padding-top: 50px;
+  }
+}
 @media (max-width: 769px) {
   .wrapper .about .about__container .about__title {
     font-family: "Open Sans", sans-serif;
@@ -771,6 +776,11 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 133.3333333333%;
   text-align: center;
   margin-bottom: 102px;
+}
+@media (max-width: 1023px) {
+  .wrapper .about .about__container .about__text {
+    margin-bottom: 50px;
+  }
 }
 @media (max-width: 769px) {
   .wrapper .about .about__container .about__text {
@@ -898,6 +908,11 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 115px;
   margin-bottom: 30px;
 }
+@media (max-width: 1023px) {
+  .wrapper .service .service__container .service__title {
+    padding-top: 50px;
+  }
+}
 @media (max-width: 769px) {
   .wrapper .service .service__container .service__title {
     font-family: "Open Sans", sans-serif;
@@ -915,6 +930,11 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 133.3333333333%;
   text-align: center;
   margin-bottom: 110px;
+}
+@media (max-width: 1023px) {
+  .wrapper .service .service__container .service__text {
+    margin-bottom: 50px;
+  }
 }
 @media (max-width: 769px) {
   .wrapper .service .service__container .service__text {
@@ -1131,6 +1151,11 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 115px;
   margin-bottom: 30px;
 }
+@media (max-width: 1023px) {
+  .wrapper .pricing .pricing__container .pricing__title {
+    padding-top: 50px;
+  }
+}
 @media (max-width: 769px) {
   .wrapper .pricing .pricing__container .pricing__title {
     font-family: "Open Sans", sans-serif;
@@ -1148,6 +1173,11 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 133.3333333333%;
   text-align: center;
   margin-bottom: 115px;
+}
+@media (max-width: 1023px) {
+  .wrapper .pricing .pricing__container .pricing__text {
+    margin-bottom: 50px;
+  }
 }
 @media (max-width: 769px) {
   .wrapper .pricing .pricing__container .pricing__text {
@@ -1494,6 +1524,11 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 115px;
   margin-bottom: 30px;
 }
+@media (max-width: 1023px) {
+  .wrapper .team .team__container .team__title {
+    padding-top: 50px;
+  }
+}
 @media (max-width: 769px) {
   .wrapper .team .team__container .team__title {
     font-family: "Open Sans", sans-serif;
@@ -1512,6 +1547,11 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   margin-bottom: 115px;
 }
+@media (max-width: 1023px) {
+  .wrapper .team .team__container .team__text {
+    margin-bottom: 50px;
+  }
+}
 @media (max-width: 769px) {
   .wrapper .team .team__container .team__text {
     font-family: "Open Sans", sans-serif;
@@ -1525,7 +1565,7 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 89%;
 }
 .wrapper .team .team__container .team__profile-block .profile {
   display: -webkit-box;
@@ -1754,6 +1794,11 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 115px;
   margin-bottom: 30px;
 }
+@media (max-width: 1023px) {
+  .wrapper .blog .blog__container .blog__title {
+    padding-top: 50px;
+  }
+}
 @media (max-width: 769px) {
   .wrapper .blog .blog__container .blog__title {
     font-family: "Open Sans", sans-serif;
@@ -1771,6 +1816,11 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 133.3333333333%;
   text-align: center;
   margin-bottom: 115px;
+}
+@media (max-width: 1023px) {
+  .wrapper .blog .blog__container .blog__text {
+    margin-bottom: 50px;
+  }
 }
 @media (max-width: 769px) {
   .wrapper .blog .blog__container .blog__text {
@@ -2072,6 +2122,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 30px;
   color: #FFFFFF;
 }
+@media (max-width: 1023px) {
+  .wrapper .contact .contact__container .contact__title {
+    padding-top: 50px;
+  }
+}
 @media (max-width: 769px) {
   .wrapper .contact .contact__container .contact__title {
     font-family: "Open Sans", sans-serif;
@@ -2090,6 +2145,11 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   margin-bottom: 115px;
   color: #FFFFFF;
+}
+@media (max-width: 1023px) {
+  .wrapper .contact .contact__container .contact__text {
+    margin-bottom: 50px;
+  }
 }
 @media (max-width: 769px) {
   .wrapper .contact .contact__container .contact__text {

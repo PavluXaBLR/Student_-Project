@@ -111,12 +111,14 @@ document.getElementById('teamButtonProfileOne').onclick = function () {
 
 
 document.getElementById('teamButtonProfileTwo').onclick = function () {
-    let documentElement = document.documentElement;
-    documentElement.clientWidth >= '1023' ? document.getElementById('teamButtonProfileTwo').disabled = false :
-        document.getElementById('teamButtonProfileTwo').disabled = true;
+
     let teamProfileBlock = document.querySelector('.team__profile-block');
     teamProfileBlock.style.justifyContent = teamProfileBlock.style.justifyContent ==='center' ? 'center' : 'center';
     console.log(documentElement)
+
+    // let documentElement = document.documentElement;
+    // documentElement.clientWidth >= '1023' ? document.getElementById('teamButtonProfileTwo').disabled = false :
+    //     document.getElementById('teamButtonProfileTwo').disabled = true;
 };
 
 document.getElementById('teamButtonProfileThree').onclick = function () {
