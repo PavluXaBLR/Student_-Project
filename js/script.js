@@ -111,8 +111,12 @@ document.getElementById('teamButtonProfileOne').onclick = function () {
 
 
 document.getElementById('teamButtonProfileTwo').onclick = function () {
+    let documentElement = document.documentElement;
+    documentElement.clientWidth >= '1023' ? document.getElementById('teamButtonProfileTwo').disabled = false :
+        document.getElementById('teamButtonProfileTwo').disabled = true;
     let teamProfileBlock = document.querySelector('.team__profile-block');
     teamProfileBlock.style.justifyContent = teamProfileBlock.style.justifyContent ==='center' ? 'center' : 'center';
+    console.log(documentElement)
 };
 
 document.getElementById('teamButtonProfileThree').onclick = function () {
@@ -138,8 +142,8 @@ let serviceContainerHeightStyle = document.querySelector('.service__container');
 
 
 serviceButtonOpen.onclick = function () {
-    serviceBlock.style.overflow = serviceBlock.style.overflow ==='visible' ? 'auto' : 'auto';
-    serviceContainerHeightStyle = serviceContainerHeightStyle === '960px' ? '1680px' : '960px' ;
+    serviceBlock.style.overflow = serviceBlock.style.overflow ==='auto' ? 'auto' : 'auto';
+    // serviceContainerHeightStyle = serviceContainerHeightStyle === '960px' ? '1680px' : '960px' ;
     let serviceButtonOpen = document.querySelector('#service__button_open');
     serviceButtonOpen.style.display = serviceButtonOpen.style.display === 'none' ? 'flex' : 'none';
 };
@@ -148,21 +152,23 @@ arrowService.onclick = function () {
     openService ()
 };
 function openService () {
+
     serviceContainerHeightStyle.style.height = serviceContainerHeightStyle.style.height ==='960px' ? '240px' : '960px';
-    // serviceContainerHeight.style.height = serviceContainerHeight.style.height ==='1680' ? '960px' :
-    //     '240px';
 
-    serviceButtonOpen = document.querySelector('#service__button_open');
-    // serviceButtonOpen.style.display = serviceButtonOpen.style.display === 'flex' ? 'none' : 'flex'
-    serviceBlock.style.overflow = serviceBlock.style.overflow ==='visible' ? 'auto' : 'visible';
+    // serviceButtonOpen = document.querySelector('#service__button_open');
 
-    // document.querySelector('.service__container').classList.toggle('open');
+    // serviceBlock.style.overflow = serviceBlock.style.overflow ==='visible' ? 'auto' : 'visible';
+
     document.querySelector('.arrowService').classList.toggle('open');
 }
 
 
 
 
-console.log(document.querySelector('.team__profile-block').style)
+// console.log(document.querySelector('.team__profile-block').style)
 let computedStyle = getComputedStyle(document.querySelector('.team__profile-block'));
-console.log(computedStyle.width)
+// console.log(computedStyle.width)
+
+let documentElement;
+
+// console.log(document.documentElement.clientWidth)
