@@ -4,8 +4,6 @@
     openMenu.style.display = openMenu.style.display === 'block' ? 'none' : 'block';
 };*/
 
-let arrowDown = document.getElementsByClassName(".arrow_black_down");
-
 
 document.getElementById("burger").onclick = function () {
     openBurger ()
@@ -24,13 +22,13 @@ function openAbout () {
     document.querySelector('.arrow_black_down').classList.toggle('open');
 }
 
-document.getElementById('arrowService').onclick = function () {
+/*document.getElementById('arrowService').onclick = function () {
     openService ()
 };
 function openService () {
     document.querySelector('.service__container').classList.toggle('open');
     document.querySelector('.arrowService').classList.toggle('open');
-}
+}*/
 
 document.getElementById('arrowPricing').onclick = function () {
     openPricing ()
@@ -84,39 +82,8 @@ function openContact() {
 }
 
 
-document.getElementById('teamButtonProfileOne').onclick = function () {
-    teamProfile1()
-};
-function teamProfile1() {
-    document.querySelector('#man-1').classList.toggle('index1');
-}
 
-/*let teamButtonProfileOne = document.getElementById('teamButtonProfileOne');
-let man = document.getElementById ('man-1') ;
-let man1 = document.querySelector('#man-1');
-
-teamButtonProfileOne.onclick = function() {
-    man1.classList.add('index1');
-};*/
-
-
-
-document.getElementById('teamButtonProfileTwo').onclick = function () {
-    teamProfile2()
-};
-function teamProfile2() {
-    document.querySelector('#man-2').classList.toggle('index2');
-}
-
-document.getElementById('teamButtonProfileThree').onclick = function () {
-    teamProfile3()
-};
-function teamProfile3() {
-    document.querySelector('#man-3').classList.toggle('index3');
-}
-let firstname = document.getElementById('firstname');
-let email = document.getElementById('e-mail');
-let phone = document.getElementById('phone');
+/* Проверка заполннеия формы обратной связи */
 
 function check() {
 let firstname = document.getElementById('firstname').value;
@@ -131,4 +98,62 @@ if (firstname && email && phone)
     }
 }
 
-console.log(firstname);
+
+/* Team block Профиль блок , изменение положения*/
+
+document.getElementById('teamButtonProfileOne').onclick = function () {
+    let teamProfileBlock = document.querySelector('.team__profile-block');
+    teamProfileBlock.style.justifyContent = teamProfileBlock.style.justifyContent ==='flex-start' ? 'flex-start' : 'flex-start';
+};
+
+document.getElementById('teamButtonProfileTwo').onclick = function () {
+    let teamProfileBlock = document.querySelector('.team__profile-block');
+    teamProfileBlock.style.justifyContent = teamProfileBlock.style.justifyContent ==='center' ? 'center' : 'center';
+};
+
+document.getElementById('teamButtonProfileThree').onclick = function () {
+    let teamProfileBlock = document.querySelector('.team__profile-block');
+    teamProfileBlock.style.justifyContent = teamProfileBlock.style.justifyContent ==='flex-end' ? 'flex-end' : 'flex-end';
+};
+
+/* Кнопака вида сервиса */
+
+/*document.getElementById("service__button_open").onclick = function () {
+    openServiceAll()
+};
+function openServiceAll() {
+    document.querySelector('.service__container').classList.toggle('openAll');
+    document.querySelector('.arrowService').classList.toggle('openAll');
+}*/
+
+let arrowService = document.getElementById('arrowService')
+let serviceButtonOpen = document.getElementById('service__button_open')
+let serviceBlock = document.querySelector('.service__block');
+let serviceContainer = document.querySelector('.service__container');
+let serviceContainerHeightStyle = document.querySelector('.service__container').style.height;
+
+
+serviceButtonOpen.onclick = function () {
+    serviceBlock.style.overflow = serviceBlock.style.overflow ==='visible' ? 'auto' : 'auto';
+    serviceContainerHeightStyle = serviceContainerHeightStyle === '960px' ? '1680px' : '960px' ;
+    let serviceButtonOpen = document.querySelector('#service__button_open');
+    serviceButtonOpen.style.display = serviceButtonOpen.style.display === 'none' ? 'flex' : 'none';
+};
+
+arrowService.onclick = function () {
+    openService ()
+};
+function openService () {
+    serviceContainerHeightStyle = serviceContainerHeightStyle ==='960px' ? '240px' :
+        '960px';
+    // serviceContainerHeight.style.height = serviceContainerHeight.style.height ==='1680' ? '960px' :
+    //     '240px';
+
+    serviceButtonOpen = document.querySelector('#service__button_open');
+    // serviceButtonOpen.style.display = serviceButtonOpen.style.display === 'flex' ? 'none' : 'flex'
+    serviceBlock.style.overflow = serviceBlock.style.overflow ==='visible' ? 'auto' : 'visible';
+
+    // document.querySelector('.service__container').classList.toggle('open');
+    document.querySelector('.arrowService').classList.toggle('open');
+}
+

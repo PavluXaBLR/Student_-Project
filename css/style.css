@@ -133,8 +133,8 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
-  min-width: 220px;
-  min-height: 70px;
+  width: 220px;
+  height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -156,9 +156,13 @@ h1, h2, h3, h4, h5, h6 {
 .service-blog_block_button:hover {
   text-decoration: underline;
 }
-@media (min-width: 769px) {
+@media (max-width: 769px) {
   .service-blog_block_button {
+    width: 130px;
+    height: 40px;
     margin: 20px 0 50px 0;
+    font-size: 16px;
+    line-height: 137.5%;
   }
 }
 
@@ -849,6 +853,7 @@ h1, h2, h3, h4, h5, h6 {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
+    margin-bottom: 50px;
   }
 }
 .wrapper .about .about__container.open {
@@ -1062,12 +1067,35 @@ h1, h2, h3, h4, h5, h6 {
             align-items: center;
   }
 }
+.wrapper .service .service__container #service__button_open {
+  display: none;
+}
+@media (max-width: 680px) {
+  .wrapper .service .service__container #service__button_open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.wrapper .service .service__container #service__button_open.openAll {
+  display: none;
+}
 .wrapper .service .service__container.open {
   overflow: hidden;
-  height: 850px;
+  height: 960px;
 }
 @media (min-width: 681px) and (max-width: 768px) {
   .wrapper .service .service__container.open {
+    height: auto;
+    overflow: visible;
+  }
+}
+.wrapper .service .service__container.openAll {
+  overflow: hidden;
+  height: auto;
+}
+@media (min-width: 681px) and (max-width: 768px) {
+  .wrapper .service .service__container.openAll {
     height: auto;
     overflow: visible;
   }
@@ -1194,7 +1222,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 1023px) {
   .wrapper .pricing .pricing__container .pricing__list .price__block .price {
-    max-width: 100%;
+    max-width: 94%;
     -webkit-box-flex: 1;
         -ms-flex: 1 0 auto;
             flex: 1 0 auto;
@@ -1497,9 +1525,6 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   width: 100%;
 }
 .wrapper .team .team__container .team__profile-block .profile {
@@ -1610,41 +1635,61 @@ h1, h2, h3, h4, h5, h6 {
     display: -ms-flexbox;
     display: flex;
     max-width: 300px;
-    position: absolute;
-  }
-  .wrapper .team .team__container .team__profile-block .profile:nth-child(1) {
-    z-index: 1;
-  }
-  .wrapper .team .team__container .team__profile-block .profile.index1:nth-child(1) {
-    z-index: 2;
-  }
-  .wrapper .team .team__container .team__profile-block .profile:nth-child(2) {
-    z-index: 0;
-  }
-  .wrapper .team .team__container .team__profile-block .profile.index2:nth-child(2) {
-    z-index: 2;
-  }
-  .wrapper .team .team__container .team__profile-block .profile:nth-child(3) {
-    z-index: 0;
-  }
-  .wrapper .team .team__container .team__profile-block .profile.index3:nth-child(3) {
-    z-index: 2;
+    /*&:nth-child(1) {
+      z-index: 1;
+    }
+    &.index1:nth-child(1) {
+      z-index: 2;
+    }
+    &:nth-child(2) {
+      z-index: 0;
+    }
+    &.index2:nth-child(2) {
+      z-index: 2;
+    }
+    &:nth-child(3) {
+      z-index: 0;
+    }
+    &.index3:nth-child(3) {
+      z-index: 2;
+    }*/
   }
 }
 @media (max-width: 1023px) {
   .wrapper .team .team__container .team__profile-block {
-    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 320px;
+    overflow: hidden;
     height: 490px;
+  }
+}
+@media (max-width: 1023px) {
+  .wrapper .team .team__container .team__profile-block.index1 {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+@media (max-width: 1023px) {
+  .wrapper .team .team__container .team__profile-block.index2 {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (max-width: 1023px) {
+  .wrapper .team .team__container .team__profile-block.index3 {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 .wrapper .team .team__container .team__next-prev-button {
@@ -1665,6 +1710,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .wrapper .team .team__container .team__next-prev-button .next-prev-button:hover {
   background: #3949AB;
+}
+@media (max-width: 1023px) {
+  .wrapper .team .team__container .team__next-prev-button {
+    margin-bottom: 50px;
+  }
 }
 @media (max-width: 769px) {
   .wrapper .team .team__container {
@@ -2190,8 +2240,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (max-width: 769px) {
+  .wrapper .contact .contact__container .contact__form-block .form-block__input .input_item .input_item_item:last-child {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 769px) {
   .wrapper .contact .contact__container .contact__form-block .form-block__input .input_item .input_item_item {
-    height: 70px;
+    height: 60px;
+    margin-bottom: 15px;
   }
 }
 .wrapper .contact .contact__container .contact__form-block .form-block__input .input_message {
@@ -2236,6 +2292,11 @@ h1, h2, h3, h4, h5, h6 {
             align-items: center;
   }
 }
+@media (max-width: 769px) {
+  .wrapper .contact .contact__container .contact__form-block .form-block__input {
+    margin-bottom: 15px;
+  }
+}
 .wrapper .contact .contact__container .contact__form-block .contact__form-block_button {
   max-width: 400px;
   width: 100%;
@@ -2253,9 +2314,14 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 115px;
 }
 .wrapper .contact .contact__container .contact__form-block .contact__form-block_button:disabled {
-  border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;
+}
+@media (max-width: 769px) {
+  .wrapper .contact .contact__container .contact__form-block .contact__form-block_button {
+    margin-bottom: 50px;
+    height: 60px;
+  }
 }
 @media (max-width: 769px) {
   .wrapper .contact .contact__container {

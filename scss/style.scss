@@ -108,8 +108,8 @@ $max-width-768: 769px;
 .service-blog_block_button {
   background-color: #00897B;
   order: 3;
-  min-width: 220px;
-  min-height: 70px;
+  width: 220px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,8 +125,12 @@ $max-width-768: 769px;
   &:hover {
     text-decoration: underline;
   }
-  @media (min-width: $max-width-768) {
+  @media (max-width: $max-width-768) {
+    width: 130px;
+    height: 40px;
     margin: 20px 0 50px 0;
+    font-size: 16px;
+    line-height: 22/16 * 100%;
   }
 }
 
@@ -683,6 +687,7 @@ $max-width-768: 769px;
         @media (max-width: 748px) {
           @include flex-column-center;
           width: 100%;
+          margin-bottom: 50px;
         }
       }
     }
@@ -835,6 +840,17 @@ $max-width-768: 769px;
         }
 
       }
+      #service__button_open {
+        display: none;
+        @media (max-width: 680px) {
+          display: flex;
+        }
+
+      }
+      #service__button_open.openAll {
+        display: none;
+      }
+
     }
 
     .service__container.open {
@@ -843,7 +859,15 @@ $max-width-768: 769px;
         overflow: visible;
       }
       overflow: hidden;
-      height: 850px;
+      height: 960px;
+    }
+    .service__container.openAll {
+      @media (min-width: 681px) and (max-width: 768px) {
+        height: auto;
+        overflow: visible;
+      }
+      overflow: hidden;
+      height: auto;
     }
   }
 
@@ -901,7 +925,7 @@ $max-width-768: 769px;
               width: 320px;
             }
             @media (max-width: 1023px) {
-              max-width: 100%;
+              max-width: 94%;
               flex: 1 0 auto;
             }
             @media (max-width: $max-width-768) {
@@ -1107,7 +1131,7 @@ $max-width-768: 769px;
 
       .team__profile-block {
         display: flex;
-        justify-content: space-between;
+        //justify-content: space-between;
         width: 100%;
 
         .profile {
@@ -1194,8 +1218,7 @@ $max-width-768: 769px;
           @media (max-width: 1023px) and (min-width: 320px) {
             display: flex;
             max-width: 300px;
-            position: absolute;
-            &:nth-child(1) {
+            /*&:nth-child(1) {
               z-index: 1;
             }
             &.index1:nth-child(1) {
@@ -1212,25 +1235,38 @@ $max-width-768: 769px;
             }
             &.index3:nth-child(3) {
               z-index: 2;
-            }
+            }*/
           }
           @media (max-width: $max-width-768) {
 
           }
         }
-        //.profile.index{
-        //  &:nth-child(2) {
-        //    z-index: 5;
-        //  }
-        //}
-
         @media (max-width: 1023px) {
-          position: relative;
-          @include flex-column-center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 320px;
+          overflow: hidden;
           height: 490px;
 
         }
       }
+      .team__profile-block.index1 {
+        @media (max-width: 1023px) {
+          justify-content: flex-start;
+        }
+      }
+      .team__profile-block.index2 {
+        @media (max-width: 1023px) {
+          justify-content: center;
+        }
+      }
+      .team__profile-block.index3 {
+        @media (max-width: 1023px) {
+          justify-content: flex-end;
+        }
+      }
+
 
       .team__next-prev-button {
         min-width: 90px;
@@ -1247,6 +1283,10 @@ $max-width-768: 769px;
           &:hover {
             background: #3949AB;
           }
+        }
+        @media (max-width: 1023px) {
+          margin-bottom: 50px;
+
         }
       }
       @media (max-width: $max-width-768) {
@@ -1589,9 +1629,13 @@ $max-width-768: 769px;
                 @media (max-width: 1023px) {
                   margin-bottom: 40px;
                 }
+                @media (max-width: $max-width-768) {
+                  margin-bottom: 15px;
+                }
               }
               @media (max-width: $max-width-768) {
-                height: 70px;
+                height: 60px;
+                margin-bottom: 15px;
               }
             }
           }
@@ -1626,6 +1670,9 @@ $max-width-768: 769px;
           @media (max-width: 1023px) {
             @include flex-column-center;
           }
+          @media (max-width: $max-width-768) {
+            margin-bottom: 15px;
+          }
         }
 
         .contact__form-block_button {
@@ -1644,11 +1691,14 @@ $max-width-768: 769px;
           border: 5px solid #222321;
 
           &:disabled {
-            border: 1px solid #999999;
             background-color: #cccccc;
             color: #666666;
           }
           margin-bottom: 115px;
+          @media (max-width: $max-width-768) {
+            margin-bottom: 50px;
+            height: 60px;
+          }
         }
       }
       @media (max-width: $max-width-768) {
