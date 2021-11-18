@@ -380,13 +380,13 @@
         <form class="contact__form-block" name="contact" method="post" action="">
               <div class="form-block__input" >
                 <div class="input_item">
-                  <input class="input_item_item" type="text" name="firstname" placeholder="Your NAME">
-                  <input class="input_item_item" type="text" name="e-mail" placeholder="Your Email">
-                  <input class="input_item_item" type="text" name="phone" placeholder="Your Phone">
+                  <input class="input_item_item" type="text" id="firstname" name="firstname" onchange="check()" placeholder="Your NAME">
+                  <input class="input_item_item" type="email" id="e-mail"name="e-mail" onchange="check()" placeholder="Your Email">
+                  <input class="input_item_item" type="tel" id="phone" name="phone" onchange="check()" placeholder="Your Phone">
                 </div>
                 <textarea class="input_message" name="message" placeholder="Write Message"></textarea>
               </div>
-              <button class="contact__form-block_button">send</button>
+              <button disabled id='buttonForm'class="contact__form-block_button">send</button>
         </form>
       </div>
     </div>

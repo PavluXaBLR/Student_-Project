@@ -114,3 +114,21 @@ document.getElementById('teamButtonProfileThree').onclick = function () {
 function teamProfile3() {
     document.querySelector('#man-3').classList.toggle('index3');
 }
+let firstname = document.getElementById('firstname');
+let email = document.getElementById('e-mail');
+let phone = document.getElementById('phone');
+
+function check() {
+let firstname = document.getElementById('firstname').value;
+let email = document.getElementById('e-mail').value;
+let phone = document.getElementById('phone').value;
+
+if (firstname && email && phone)
+    {
+    document.getElementById('buttonForm').disabled = false;
+    } else {
+    document.getElementById('buttonForm').disabled = true;
+    }
+}
+
+console.log(firstname);
