@@ -102,9 +102,13 @@ if (firstname && email && phone)
 /* Team block Профиль блок , изменение положения*/
 
 document.getElementById('teamButtonProfileOne').onclick = function () {
+
     let teamProfileBlock = document.querySelector('.team__profile-block');
     teamProfileBlock.style.justifyContent = teamProfileBlock.style.justifyContent ==='flex-start' ? 'flex-start' : 'flex-start';
+
 };
+
+
 
 document.getElementById('teamButtonProfileTwo').onclick = function () {
     let teamProfileBlock = document.querySelector('.team__profile-block');
@@ -130,7 +134,7 @@ let arrowService = document.getElementById('arrowService')
 let serviceButtonOpen = document.getElementById('service__button_open')
 let serviceBlock = document.querySelector('.service__block');
 let serviceContainer = document.querySelector('.service__container');
-let serviceContainerHeightStyle = document.querySelector('.service__container').style.height;
+let serviceContainerHeightStyle = document.querySelector('.service__container');
 
 
 serviceButtonOpen.onclick = function () {
@@ -144,8 +148,7 @@ arrowService.onclick = function () {
     openService ()
 };
 function openService () {
-    serviceContainerHeightStyle = serviceContainerHeightStyle ==='960px' ? '240px' :
-        '960px';
+    serviceContainerHeightStyle.style.height = serviceContainerHeightStyle.style.height ==='960px' ? '240px' : '960px';
     // serviceContainerHeight.style.height = serviceContainerHeight.style.height ==='1680' ? '960px' :
     //     '240px';
 
@@ -157,3 +160,9 @@ function openService () {
     document.querySelector('.arrowService').classList.toggle('open');
 }
 
+
+
+
+console.log(document.querySelector('.team__profile-block').style)
+let computedStyle = getComputedStyle(document.querySelector('.team__profile-block'));
+console.log(computedStyle.width)
