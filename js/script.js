@@ -99,7 +99,7 @@ if (firstname && email && phone)
 }
 
 
-/* Team block Профиль блок , изменение положения*/
+/* team__block Профиль блок , изменение положения, псевдо карусель ....*/
 
 document.getElementById('teamButtonProfileOne').onclick = function () {
 
@@ -149,6 +149,7 @@ serviceButtonOpen.onclick = function () {
     // serviceContainerHeightStyle = serviceContainerHeightStyle === '960px' ? '1680px' : '1680px' ;
     let serviceButtonOpen = document.querySelector('#service__button_open');
     serviceButtonOpen.style.display = serviceButtonOpen.style.display === 'none' ? 'flex' : 'none';
+    serviceContainer.style.height = serviceContainer.style.height === '960px' ? '1680px' : '960px';
 };
 
 arrowService.onclick = function () {
@@ -157,6 +158,8 @@ arrowService.onclick = function () {
 function openService () {
     serviceContainerHeightStyle.style.height = serviceContainerHeightStyle.style.height ==='960px'
     ||  serviceContainerHeightStyle.style.height ==='1680px'? '240px' : '960px';
+
+    serviceButtonOpen.style.display = serviceButtonOpen.style.display === 'flex' ? 'none' : 'flex';
 
     serviceBlock.style.overflow = serviceBlock.style.overflow ==='visible' ? 'visible' : 'visible';
 

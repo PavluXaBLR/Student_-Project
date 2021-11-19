@@ -878,6 +878,22 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper .service {
   width: 100%;
   background-color: #E4FDF9;
+  /*.service__container.open {
+    @media (min-width: 681px) and (max-width: 768px) {
+      height: auto;
+      overflow: visible;
+    }
+    overflow: hidden;
+    height: 960px;
+  }*/
+  /*.service__container.openAll {
+    @media (min-width: 681px) and (max-width: 768px) {
+      height: auto;
+      overflow: visible;
+    }
+    overflow: hidden;
+    height: auto;
+  }*/
 }
 .wrapper .service .service__container {
   display: -webkit-box;
@@ -896,6 +912,9 @@ h1, h2, h3, h4, h5, h6 {
       flex-wrap: wrap;
   margin: 0 auto;
   overflow: hidden;
+  /*#service__button_open.openAll {
+    display: none;
+  }*/
 }
 @media (max-width: 769px) {
   .wrapper .service .service__container {
@@ -979,7 +998,7 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper .service .service__container .service__block .type__service .type__service_img {
   margin-bottom: 40px;
 }
-@media (max-width: 680px) {
+@media (max-width: 769px) {
   .wrapper .service .service__container .service__block .type__service .type__service_img {
     margin-bottom: 1px;
   }
@@ -989,7 +1008,7 @@ h1, h2, h3, h4, h5, h6 {
   font: 600 20px/22px "Open Sans", sans-serif;
   text-align: center;
 }
-@media (max-width: 680px) {
+@media (max-width: 769px) {
   .wrapper .service .service__container .service__block .type__service .type__service_title {
     margin-bottom: 1px;
   }
@@ -999,7 +1018,7 @@ h1, h2, h3, h4, h5, h6 {
   font: 15px/25px "Open Sans", sans-serif;
   text-align: center;
 }
-@media (max-width: 680px) {
+@media (max-width: 769px) {
   .wrapper .service .service__container .service__block .type__service .type__service_text {
     display: none;
   }
@@ -1011,7 +1030,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #FFFFFF;
   font: 600 20px/22px "Open Sans", sans-serif;
 }
-@media (max-width: 680px) {
+@media (max-width: 769px) {
   .wrapper .service .service__container .service__block .type__service .type__service_button {
     width: 130px;
     height: 40px;
@@ -1053,7 +1072,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 40px 10px;
   }
 }
-@media (max-width: 680px) {
+@media (max-width: 769px) {
   .wrapper .service .service__container .service__block .type__service {
     width: 300px;
     height: 192px;
@@ -1078,7 +1097,7 @@ h1, h2, h3, h4, h5, h6 {
             align-items: center;
   }
 }
-@media (max-width: 680px) {
+@media (max-width: 769px) {
   .wrapper .service .service__container .service__block {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1094,36 +1113,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .wrapper .service .service__container #service__button_open {
   display: none;
-}
-@media (max-width: 680px) {
-  .wrapper .service .service__container #service__button_open {
-    display: -webkit-box;
-    display: -ms-flexbox;
+  /*@media (max-width: 680px) {
     display: flex;
-  }
-}
-.wrapper .service .service__container #service__button_open.openAll {
-  display: none;
-}
-.wrapper .service .service__container.open {
-  overflow: hidden;
-  height: 960px;
-}
-@media (min-width: 681px) and (max-width: 768px) {
-  .wrapper .service .service__container.open {
-    height: auto;
-    overflow: visible;
-  }
-}
-.wrapper .service .service__container.openAll {
-  overflow: hidden;
-  height: auto;
-}
-@media (min-width: 681px) and (max-width: 768px) {
-  .wrapper .service .service__container.openAll {
-    height: auto;
-    overflow: visible;
-  }
+  }*/
 }
 .wrapper .pricing {
   width: 100%;

@@ -751,7 +751,7 @@ $max-width-768: 769px;
 
           .type__service_img {
             margin-bottom: 40px;
-            @media (max-width: 680px) {
+            @media (max-width: $max-width-768) {
               margin-bottom: 1px;
             }
 
@@ -761,7 +761,7 @@ $max-width-768: 769px;
             margin-bottom: 20px;
             font: 600 20px/22px $f-family-Open;
             text-align: center;
-            @media (max-width: 680px) {
+            @media (max-width: $max-width-768) {
               margin-bottom: 1px;
             }
 
@@ -771,7 +771,7 @@ $max-width-768: 769px;
             margin-bottom: 40px;
             font: 15px/25px $f-family-Open;
             text-align: center;
-            @media (max-width: 680px) {
+            @media (max-width: $max-width-768) {
               display: none;
             }
 
@@ -783,7 +783,7 @@ $max-width-768: 769px;
             border: 2px solid #000000;
             background-color: $color_white;
             font: 600 20px/22px $f-family-Open;
-            @media (max-width: 680px) {
+            @media (max-width: $max-width-768) {
               width: 130px;
               height: 40px;
               font: 600 16px/22px $f-family-Open;
@@ -827,7 +827,7 @@ $max-width-768: 769px;
             margin: 10px;
             padding: 40px 10px
           }
-          @media (max-width: 680px) {
+          @media (max-width: $max-width-768) {
             width: 300px;
             height: 192px;
             margin: 10px;
@@ -844,40 +844,40 @@ $max-width-768: 769px;
           justify-content: center;
           align-items: center;
         }
-        @media (max-width: 680px) {
+        @media (max-width: $max-width-768) {
           @include flex-column-center;
         }
 
       }
       #service__button_open {
         display: none;
-        @media (max-width: 680px) {
+        /*@media (max-width: 680px) {
           display: flex;
-        }
+        }*/
 
       }
-      #service__button_open.openAll {
+      /*#service__button_open.openAll {
         display: none;
-      }
+      }*/
 
     }
 
-    .service__container.open {
+    /*.service__container.open {
       @media (min-width: 681px) and (max-width: 768px) {
         height: auto;
         overflow: visible;
       }
       overflow: hidden;
       height: 960px;
-    }
-    .service__container.openAll {
+    }*/
+    /*.service__container.openAll {
       @media (min-width: 681px) and (max-width: 768px) {
         height: auto;
         overflow: visible;
       }
       overflow: hidden;
       height: auto;
-    }
+    }*/
   }
 
   .pricing {
