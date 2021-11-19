@@ -145,7 +145,7 @@ let serviceContainerHeightStyle = document.querySelector('.service__container');
 
 serviceButtonOpen.onclick = function () {
     // serviceBlock.style.height = serviceBlock.style.height === '960px' ? '1680px' : '1680px';
-    serviceBlock.style.overflow = serviceBlock.style.overflow ==='auto' ? 'auto' : 'auto';
+    // serviceBlock.style.overflow = serviceBlock.style.overflow ==='auto' ? 'auto' : 'auto';
     // serviceContainerHeightStyle = serviceContainerHeightStyle === '960px' ? '1680px' : '1680px' ;
     let serviceButtonOpen = document.querySelector('#service__button_open');
     serviceButtonOpen.style.display = serviceButtonOpen.style.display === 'none' ? 'flex' : 'none';
@@ -159,9 +159,10 @@ function openService () {
     serviceContainerHeightStyle.style.height = serviceContainerHeightStyle.style.height ==='960px'
     ||  serviceContainerHeightStyle.style.height ==='1680px'? '240px' : '960px';
 
-    serviceButtonOpen.style.display = serviceButtonOpen.style.display === 'flex' ? 'none' : 'flex';
+    serviceButtonOpen.style.display = (serviceButtonOpen.style.display === 'none' && serviceContainerHeightStyle.style.height === '960px') ? 'flex' :
+        (serviceContainerHeightStyle.style.height === '240px' && serviceButtonOpen.style.display === 'flex') ? 'none' : 'flex';
 
-    serviceBlock.style.overflow = serviceBlock.style.overflow ==='visible' ? 'visible' : 'visible';
+    // serviceBlock.style.overflow = serviceBlock.style.overflow ==='visible' ? 'visible' : 'visible';
 
     document.querySelector('.arrowService').classList.toggle('open');
 }
