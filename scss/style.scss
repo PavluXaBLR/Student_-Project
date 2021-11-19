@@ -493,7 +493,7 @@ $max-width-768: 769px;
               }
             }
 
-            @media (max-width: 1015px) {
+            @media (max-width: 1040px) {
               margin-left: 30px;
             }
             @media (max-width: 830px) {
@@ -503,6 +503,9 @@ $max-width-768: 769px;
 
           @media (max-width: 1200px) {
             margin-left: 30px;
+          }
+          @media (max-width: 1050px) {
+            margin-left: 25px;
           }
           @media (max-width: 830px) {
             margin-left: 0;

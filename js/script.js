@@ -126,7 +126,7 @@ document.getElementById('teamButtonProfileThree').onclick = function () {
     teamProfileBlock.style.justifyContent = teamProfileBlock.style.justifyContent ==='flex-end' ? 'flex-end' : 'flex-end';
 };
 
-/* Кнопака вида сервиса */
+/* Кнопка вида сервиса */
 
 /*document.getElementById("service__button_open").onclick = function () {
     openServiceAll()
@@ -144,8 +144,9 @@ let serviceContainerHeightStyle = document.querySelector('.service__container');
 
 
 serviceButtonOpen.onclick = function () {
+    // serviceBlock.style.height = serviceBlock.style.height === '960px' ? '1680px' : '1680px';
     serviceBlock.style.overflow = serviceBlock.style.overflow ==='auto' ? 'auto' : 'auto';
-    // serviceContainerHeightStyle = serviceContainerHeightStyle === '960px' ? '1680px' : '960px' ;
+    // serviceContainerHeightStyle = serviceContainerHeightStyle === '960px' ? '1680px' : '1680px' ;
     let serviceButtonOpen = document.querySelector('#service__button_open');
     serviceButtonOpen.style.display = serviceButtonOpen.style.display === 'none' ? 'flex' : 'none';
 };
@@ -154,12 +155,10 @@ arrowService.onclick = function () {
     openService ()
 };
 function openService () {
+    serviceContainerHeightStyle.style.height = serviceContainerHeightStyle.style.height ==='960px'
+    ||  serviceContainerHeightStyle.style.height ==='1680px'? '240px' : '960px';
 
-    serviceContainerHeightStyle.style.height = serviceContainerHeightStyle.style.height ==='960px' ? '240px' : '960px';
-
-    // serviceButtonOpen = document.querySelector('#service__button_open');
-
-    // serviceBlock.style.overflow = serviceBlock.style.overflow ==='visible' ? 'auto' : 'visible';
+    serviceBlock.style.overflow = serviceBlock.style.overflow ==='visible' ? 'visible' : 'visible';
 
     document.querySelector('.arrowService').classList.toggle('open');
 }

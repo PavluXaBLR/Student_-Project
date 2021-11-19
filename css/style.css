@@ -518,7 +518,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
   }
 }
-@media (max-width: 1015px) {
+@media (max-width: 1040px) {
   .wrapper .header .header__body .header__menu .menu__list .menu__item {
     margin-left: 30px;
   }
@@ -531,6 +531,11 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 1200px) {
   .wrapper .header .header__body .header__menu .menu__list {
     margin-left: 30px;
+  }
+}
+@media (max-width: 1050px) {
+  .wrapper .header .header__body .header__menu .menu__list {
+    margin-left: 25px;
   }
 }
 @media (max-width: 830px) {
